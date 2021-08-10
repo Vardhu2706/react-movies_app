@@ -21,7 +21,8 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="movie-container">
+
       {movies.length > 0 &&
         movies.map((movie) => <Movie key={movie.id} {...movie} />)}
     </div>

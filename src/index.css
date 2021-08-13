@@ -11,8 +11,21 @@ body {
   margin: 0;
 }
 
+root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 .movie-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -61,4 +74,35 @@ body {
 
 .movie:hover .movie-overview {
   transform: translateY(0%);
+}
+
+.search {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  padding: 0.5rem;
+  background-color: #22254b;
+  color: #fff;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.tag {
+  background-color: #22254b;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.tag.green {
+  color: rgb(0, 167, 0);
+}
+.tag.orange {
+  color: orange;
+}
+.tag.red {
+  color: red;
 }

@@ -106,3 +106,12 @@ header {
 .tag.red {
   color: red;
 }
+
+.reset-button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+}

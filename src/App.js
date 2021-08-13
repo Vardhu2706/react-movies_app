@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 // Importing Components
 import Movie from "./Components/Movie";
 import { API_KEY } from "./Config";
+import { VscDebugRestart } from "react-icons/vsc";
 
 const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
 
@@ -22,7 +23,7 @@ function App() {
   }, []);
 
   const getMovies = (API) => {
-    fetch(SEARCH_API + searchTerm)
+    fetch(API)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
@@ -45,6 +46,11 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  // Handle Reset
+  const handleReset = () => {
+    getMovies(FEATURED_API);
+  };
+
   return (
     <>
       <header>
@@ -57,6 +63,9 @@ function App() {
             onChange={handleOnChange}
           />
         </form>
+        <span className="reset-button" onClick={handleReset}>
+          <VscDebugRestart />
+        </span>
       </header>
       <div className="movie-container">
         {movies.length > 0 &&

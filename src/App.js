@@ -78,10 +78,3 @@ function App() {
 
 export default App;
 
-/* 
-  featured: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=18f9c464cbe935eb9ac38f0d4fc2e1e8&page=1"
-
-  images: "https://image.tmdb.org/t/p/w1280"
-
-  search: "https://api.themoviedb.org/3/search/movie?&api_key=18f9c464cbe935eb9ac38f0d4fc2e1e8&query="
-*/

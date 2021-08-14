@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Movie from "./Components/Movie";
 import { VscDebugRestart } from "react-icons/vsc";
 
-const API_KEY = "18f9c464cbe935eb9ac38f0d4fc2e1e8";
+const API_KEY = "";
 
 const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
 
